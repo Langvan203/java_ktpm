@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<persistence-unit name="persistence-data"><!-- name được quy ước trước, cũng được viết ở JPAConfig -->
+		<class>com.leminhtien.entity.UserEntity</class>
+		<class>com.leminhtien.entity.RoleEntity</class>
+		<class>com.leminhtien.entity.ProductEntity</class>
+		<class>com.leminhtien.entity.SizeEntity</class>
+		<class>com.leminhtien.entity.CategoryEntity</class>
+		<class>com.leminhtien.entity.CategoryGenderEntity</class>
+		<class>com.leminhtien.entity.OrderEntity</class>
+		<class>com.leminhtien.entity.ShopEntity</class>
+		<class>com.leminhtien.entity.CartEntity</class>
+		<class>com.leminhtien.entity.TransportEntity</class>
+	</persistence-unit>
+</persistence>
