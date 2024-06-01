@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-5">
+                <div class="card mb-5" style="background: #0c167d87">
                     <div class="card-body p-4">
                         <form id="form-submit">
                             <!-- 2 column grid layout with text inputs for the first and last names -->

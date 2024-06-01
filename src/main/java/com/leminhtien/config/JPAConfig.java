@@ -24,8 +24,8 @@ public class JPAConfig {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(dataSource());
-		em.setPersistenceUnitName("persistence-data");//nơi làm cầu nối để map class với table trong db
-//		em.setPackagesToScan("com.leminhtien.entity");
+//		em.setPersistenceUnitName("persistence");//nơi làm cầu nối để map class với table trong db
+		em.setPackagesToScan("com.leminhtien.entity");
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		em.setJpaVendorAdapter(vendorAdapter);
 		em.setJpaProperties(additionalProperties());//Cấu hình JPA
@@ -37,8 +37,8 @@ public class JPAConfig {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUsername("root");
-		dataSource.setPassword("van321pro");
-		dataSource.setUrl("jdbc:mysql://localhost:4306/springSale");
+		dataSource.setPassword("123456");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/springSale");
 		return dataSource;
 
 	}
@@ -61,7 +61,7 @@ public class JPAConfig {
 //		 properties.setProperty("hibernate.hbm2ddl.auto", "create-only");
 		 properties.setProperty("hibernate.hbm2ddl.auto", "update");
 //		 properties.setProperty("hibernate.hbm2ddl.auto", "update");//khi database ổn định thì không tự động tạo nữa.
-//		 properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");//chỉ định loại csdl sử dụng
+		 properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");//chỉ định loại csdl sử dụng
 		 properties.setProperty("hibernate.enable_lazy_load_no_trans","true");//bật tính năng load giá trị từ bảng phụ thuộc khi được gọi( tác dụng để fetch=FetchType.LAZY <=> fetch=FetchType.EAGE
 		 properties.setProperty("hibernate.show_sql", "true");
 		return properties;

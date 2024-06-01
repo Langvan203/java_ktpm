@@ -19,7 +19,7 @@
                 Thông báo ở đây
             </div>
             <div class="row gx-5">
-                <aside class="col-lg-6">
+                <aside class="col-lg-6 detail-product">
                     <div class="d-flex justify-content-center mb-3" style="width: 400px; height: 400px">
                         <%--Product imgs--%>
                         <img src="<c:url value='${product.img}'/>" alt="">
@@ -234,15 +234,15 @@
             success: function(data,status, xhr){
                 $('#errorSystem').removeClass().addClass("alert alert-success");
                 var redirectUrl = xhr.getResponseHeader("Location");
-                    if (xhr.status === 302) {
-                        var redirectUrl = xhr.getResponseHeader("Location");
-                        // Thực hiện chuyển hướng tới redirectUrl
-                        window.location.href = redirectUrl;
-                    }
-                    if(xhr.status ===200||xhr.status===201){
-                        $('#errorSystem').text("Thêm thành công");
+                if (xhr.status === 302) {
+                    var redirectUrl = xhr.getResponseHeader("Location");
+                    // Thực hiện chuyển hướng tới redirectUrl
+                    window.location.href = redirectUrl;
+                }
+                if(xhr.status ===200||xhr.status===201){
+                    $('#errorSystem').text("Thêm thành công");
 
-                    }
+                }
                 // }else{
                 //     $('#errorSystem').text("Thêm không thành công");
                 // }

@@ -76,6 +76,13 @@ aside {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%); }
+
+  .detail-product{
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%); }
+  }
+
   aside .toggle {
     top: 50%;
     padding-right: 30px;
